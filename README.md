@@ -11,8 +11,8 @@ Practice JavaScript features through simple pjts.
 | Light & Dark Mode   | 210312   |                                                       |      |
 | Animated Template   | 210313   |                                                       |      |
 | Animated Navigation | 210313   | 210313<br />- make `nav a` occupy full width & height |      |
-| Music Player        |          |                                                       |      |
-| Custom Countdown    |          |                                                       |      |
+| Music Player        | 210315   |                                                       |      |
+| Custom Countdown    | 210316   |                                                       |      |
 | Book Keeper         |          |                                                       |      |
 | VIdeo Player        |          |                                                       |      |
 | Form Validator      |          |                                                       |      |
