@@ -13,7 +13,7 @@ Practice JavaScript features through simple pjts.
 | Animated Navigation | 210313   | 210313<br />- make `nav a` occupy full width & height |      |
 | Music Player        | 210315   |                                                       |      |
 | Custom Countdown    | 210316   |                                                       |      |
-| Book Keeper         |          |                                                       |      |
+| Book Keeper         | 210317   |                                                       |      |
 | VIdeo Player        |          |                                                       |      |
 | Form Validator      |          |                                                       |      |
 | Spock Rock Game     |          |                                                       |      |
