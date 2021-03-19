@@ -14,7 +14,7 @@ Practice JavaScript features through simple pjts.
 | Music Player        | 210315   |                                                       |      |
 | Custom Countdown    | 210316   |                                                       |      |
 | Book Keeper         | 210317   |                                                       |      |
-| VIdeo Player        |          |                                                       |      |
+| VIdeo Player        | 210319   |                                                       |      |
 | Form Validator      |          |                                                       |      |
 | Spock Rock Game     |          |                                                       |      |
 | NASA APOD           |          |                                                       |      |
