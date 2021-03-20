@@ -15,7 +15,7 @@ Practice JavaScript features through simple pjts.
 | Custom Countdown    | 210316   |                                                       |      |
 | Book Keeper         | 210317   |                                                       |      |
 | VIdeo Player        | 210319   |                                                       |      |
-| Form Validator      |          |                                                       |      |
+| Form Validator      | 210320   |                                                       |      |
 | Spock Rock Game     |          |                                                       |      |
 | NASA APOD           |          |                                                       |      |
 | Math Sprint Game    |          |                                                       |      |
