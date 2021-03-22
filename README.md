@@ -16,7 +16,7 @@ Practice JavaScript features through simple pjts.
 | Book Keeper         | 210317   |                                                       |      |
 | VIdeo Player        | 210319   |                                                       |      |
 | Form Validator      | 210320   |                                                       |      |
-| Spock Rock Game     |          |                                                       |      |
+| Spock Rock Game     | 210322   |                                                       |      |
 | NASA APOD           |          |                                                       |      |
 | Math Sprint Game    |          |                                                       |      |
 | Drag n' Drop        |          |                                                       |      |
