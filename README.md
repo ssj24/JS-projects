@@ -18,7 +18,7 @@ Practice JavaScript features through simple pjts.
 | Form Validator      | 210320   |                                                       |      |
 | Spock Rock Game     | 210322   |                                                       |      |
 | NASA APOD           | 210323   |                                                       |      |
-| Math Sprint Game    |          |                                                       |      |
+| Math Sprint Game    | 210324   |                                                       |      |
 | Drag n' Drop        |          |                                                       |      |
 | Calculator          |          |                                                       |      |
 | Splash Page         |          |                                                       |      |
