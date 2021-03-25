@@ -19,7 +19,7 @@ Practice JavaScript features through simple pjts.
 | Spock Rock Game     | 210322   |                                                       |      |
 | NASA APOD           | 210323   |                                                       |      |
 | Math Sprint Game    | 210324   |                                                       |      |
-| Drag n' Drop        |          |                                                       |      |
+| Drag n' Drop        | 210325   |                                                       |      |
 | Calculator          |          |                                                       |      |
 | Splash Page         |          |                                                       |      |
 | Paint Clone         |          |                                                       |      |
