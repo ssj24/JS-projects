@@ -20,7 +20,7 @@ Practice JavaScript features through simple pjts.
 | NASA APOD           | 210323   |                                                       |      |
 | Math Sprint Game    | 210324   |                                                       |      |
 | Drag n' Drop        | 210325   |                                                       |      |
-| Calculator          |          |                                                       |      |
+| Calculator          | 210326   |                                                       |      |
 | Splash Page         |          |                                                       |      |
 | Paint Clone         |          |                                                       |      |
 | Pong                |          |                                                       |      |
