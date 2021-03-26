@@ -21,7 +21,7 @@ Practice JavaScript features through simple pjts.
 | Math Sprint Game    | 210324   |                                                       |      |
 | Drag n' Drop        | 210325   |                                                       |      |
 | Calculator          | 210326   |                                                       |      |
-| Splash Page         |          |                                                       |      |
+| Splash Page         | 210327   |                                                       |      |
 | Paint Clone         |          |                                                       |      |
 | Pong                |          |                                                       |      |
 

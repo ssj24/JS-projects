@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: #54575A;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F3F8F7 49.91%, #FFF9F5 94.19%);
+  font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  width: 1440px;
+  height: 1379px;
+  margin: auto;
+}
+
+.brand-img {
+  position: absolute;
+  width: 193px;
+  height: 47.64px;
+  left: 221px;
+  top: 50.25px;
+}
+
+.title {
+  position: absolute;
+  width: 458px;
+  height: 135px;
+  left: 221px;
+  top: 236px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 67px;
+}
+
+.text {
+  position: absolute;
+  width: 394px;
+  height: 96px;
+  left: 221px;
+  top: 403px;
+
+  font-family: Futura PT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.app-store-btn {
+  position: absolute;
+  width: 138.44px;
+  height: 46.28px;
+  left: 221px;
+  top: 531px;
+}
+
+.app-store-btn img {
+  width: 138.44px;
+  height: 46.28px;
+}
+
+.google-play-btn {
+  position: absolute;
+  width: 156.19px;
+  height: 46.28px;
+  left: 381.81px;
+  top: 531px;
+}
+
+.google-play-btn img {
+  width: 156.19px;
+  height: 46.28px;
+}
+
+.main-image-container {
+  position: absolute;
+  width: 535.72px;
+  height: 309.27px;
+  left: 683.28px;
+  top: 229.73px;
+}
+
+.main-image-container img {
+  height: 411.15px;
+}
+
+.profile-img {
+  position: absolute;
+  height: 444px;
+  left: 737px;
+  right: 479px;
+  top: 686px;
+}
+
+.orders-img {
+  position: absolute;
+  height: 470px; /* Had to change to show full box shadow */
+  left: 479px;
+  right: 737px;
+  top: 913px;
+}
+
+.home-img {
+  position: absolute;
+  height: 470px; /* Had to change to show full box shadow */
+  left: 995px;
+  right: 221px;
+  top: 908px;
+}
+
+.cart-img {
+  position: absolute;
+  height: 222px; /* Had to cut in half */
+  left: 221px;
+  right: 995px;
+  top: 1157px;
+}
+
+.product-img {
+  position: absolute;
+  height: 222px; /* Had to cut in half */
+  left: 737px;
+  right: 479px;
+  top: 1157px;
+}
+
+/* Background Toggles */
+.background-toggles {
+  position: absolute;
+  right: 150px;
+  top: 70px;
+  display: flex;
+}
+
+.background-toggles > div {
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Backgrounds */
+.background-1 {
+  background-color: #f7f7f7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23d4d4d4' fill-opacity='0.25'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.background-2 {
+  background: linear-gradient(to top, #003973, #e5e5be);
+}
+.background-3 {
+  background: darksalmon;
+}
