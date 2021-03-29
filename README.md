@@ -22,6 +22,6 @@ Practice JavaScript features through simple pjts.
 | Drag n' Drop        | 210325   |                                                       |      |
 | Calculator          | 210326   |                                                       |      |
 | Splash Page         | 210327   |                                                       |      |
-| Paint Clone         |          |                                                       |      |
+| Paint Clone         | 210329   |                                                       |      |
 | Pong                |          |                                                       |      |
 
