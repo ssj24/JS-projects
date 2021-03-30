@@ -23,5 +23,5 @@ Practice JavaScript features through simple pjts.
 | Calculator          | 210326   |                                                       |      |
 | Splash Page         | 210327   |                                                       |      |
 | Paint Clone         | 210329   |                                                       |      |
-| Pong                |          |                                                       |      |
+| Pong                | 210330   |                                                       |      |
 
