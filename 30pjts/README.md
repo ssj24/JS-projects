@@ -5,10 +5,10 @@
 | Drum kit                | 210403   |             |      |
 | Clock                   | 210408   |             |      |
 | CSS variables           | 210408   |             |      |
-| Cardio1                 |          |             |      |
+| Array1                  | 210409   |             |      |
 | Image gallery           |          |             |      |
 | Ajax type               |          |             |      |
-| Cardio2                 |          |             |      |
+| Array2                  |          |             |      |
 | Canvas                  |          |             |      |
 | Dev tools               |          |             |      |
 | Checkbox                |          |             |      |
