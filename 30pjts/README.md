@@ -3,8 +3,8 @@
 |                         | complete | improvement |      |
 | ----------------------- | -------- | ----------- | ---- |
 | Drum kit                | 210403   |             |      |
-| Clock                   |          |             |      |
-| CSS variables           |          |             |      |
+| Clock                   | 210408   |             |      |
+| CSS variables           | 210408   |             |      |
 | Cardio1                 |          |             |      |
 | Image gallery           |          |             |      |
 | Ajax type               |          |             |      |
