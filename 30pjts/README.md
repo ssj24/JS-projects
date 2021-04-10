@@ -6,8 +6,8 @@
 | Clock                   | 210408   |             |      |
 | CSS variables           | 210408   |             |      |
 | Array1                  | 210409   |             |      |
-| Image gallery           |          |             |      |
-| Ajax type               |          |             |      |
+| Image gallery           | 210410   |             |      |
+| Ajax type               | 210410   |             |      |
 | Array2                  |          |             |      |
 | Canvas                  |          |             |      |
 | Dev tools               |          |             |      |
