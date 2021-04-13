@@ -8,7 +8,7 @@
 | Array1                  | 210409   |             |      |
 | Image gallery           | 210410   |             |      |
 | Ajax type               | 210410   |             |      |
-| Array2                  |          |             |      |
+| Array2                  | 210413   |             |      |
 | Canvas                  |          |             |      |
 | Dev tools               |          |             |      |
 | Checkbox                |          |             |      |
