@@ -1,6 +1,6 @@
 # Wes Bos - 30 day vanilla JS coding challenge
 
-|                         | complete | improvement |      |
+|                         | Creation | Improvement |      |
 | ----------------------- | -------- | ----------- | ---- |
 | Drum kit                | 210403   |             |      |
 | Clock                   | 210408   |             |      |
