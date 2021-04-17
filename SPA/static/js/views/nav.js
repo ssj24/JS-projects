@@ -24,6 +24,7 @@ function toggleNav() {
     overlay.classList.replace('overlay-slide-left','overlay-slide-right');
     // Animate In - Nav Items
     navAnimation('out', 'in');
+    menuBars.style.backgroundColor= '';
   } else {
     // Animate Out - Overlay
     overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
@@ -33,7 +34,10 @@ function toggleNav() {
 };
 
 // Event Listeners
-menuBars.addEventListener('click', toggleNav);
-navItems.forEach((nav) => {
-  nav.addEventListener('click', toggleNav);
-})
+export default function init() {
+  console.log('yay');
+  menuBars.addEventListener('click', toggleNav);
+  navItems.forEach((nav) => {
+    nav.addEventListener('click', toggleNav);
+  })
+}
