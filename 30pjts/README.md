@@ -9,10 +9,10 @@
 | Image gallery           | 210410   |             |      |
 | Ajax type               | 210410   |             |      |
 | Array2                  | 210413   |             |      |
-| Canvas                  |          |             |      |
-| Dev tools               |          |             |      |
-| Checkbox                |          |             |      |
-| Video player            |          |             |      |
+| Canvas                  | 210413   |             |      |
+| Dev tools               | 210419   |             |      |
+| Checkbox                | 210419   |             |      |
+| Video player            | 210420   | 201420      |      |
 | Conami code             |          |             |      |
 | Slide scroll            |          |             |      |
 | Obj and arr             |          |             |      |
