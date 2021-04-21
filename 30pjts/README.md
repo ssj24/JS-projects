@@ -13,7 +13,7 @@
 | Dev tools               | 210419   |             |      |
 | Checkbox                | 210419   |             |      |
 | Video player            | 210420   | 201420      |      |
-| Conami code             |          |             |      |
+| Conami code             | 210421   |             |      |
 | Slide scroll            |          |             |      |
 | Obj and arr             |          |             |      |
 | Localstorage            |          |             |      |
