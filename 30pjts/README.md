@@ -14,7 +14,7 @@
 | Checkbox                | 210419   |             |      |
 | Video player            | 210420   | 201420      |      |
 | Conami code             | 210421   |             |      |
-| Slide scroll            |          |             |      |
+| Slide scroll            | 210423   |             |      |
 | Obj and arr             |          |             |      |
 | Localstorage            |          |             |      |
 | Text shadow             |          |             |      |
