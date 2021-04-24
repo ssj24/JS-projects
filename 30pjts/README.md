@@ -15,8 +15,8 @@
 | Video player            | 210420   | 201420      |      |
 | Conami code             | 210421   |             |      |
 | Slide scroll            | 210423   |             |      |
-| Obj and arr             |          |             |      |
-| Localstorage            |          |             |      |
+| Obj and arr             | 210424   |             |      |
+| Localstorage            | 210424   |             |      |
 | Text shadow             |          |             |      |
 | Sorting names           |          |             |      |
 | Tally                   |          |             |      |
