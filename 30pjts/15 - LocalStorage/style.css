@@ -38,6 +38,39 @@ h2 {
   font-weight: 200;
 }
 
+.options {
+  display: flex;
+  justify-content: center;
+}
+
+.options input {
+  display: none;
+}
+
+.options input:first-child {
+  display:inline-block;
+}
+.options label {
+  cursor: pointer;
+}
+
+.reset {
+  height: 20px;
+  color: rgb(191, 3, 3);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.reset:active, .reset:focus {
+  outline: 0;
+}
+
+.check {
+  cursor: pointer;
+}
+
 .plates {
   margin: 0;
   padding: 0;

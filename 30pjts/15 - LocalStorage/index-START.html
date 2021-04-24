@@ -15,7 +15,15 @@
 
   <div class="wrapper">
     <h2>LOCAL TAPAS</h2>
-    <p></p>
+    <span class="options">
+
+      <input class="reset" type="button" title="reset list" value="x"/>
+      <input class="check" id="check" type="checkbox">
+      <label for="check" title="check all">&nbsp;🌮</label>
+      <input class="uncheck" id="uncheck" type="checkbox">
+      <label for="uncheck" title="uncheck all">&nbsp;&nbsp;⬜</label>
+      <p></p>
+    </span>
     <ul class="plates">
       <li>Loading Tapas...</li>
     </ul>
@@ -26,9 +34,17 @@
   </div>
 
 <script>
+  const resetBtn = document.querySelector('.reset');
+  const checkBtn = document.querySelector('.check');
+  const uncheckBtn = document.querySelector('.uncheck');
   const addItems = document.querySelector('.add-items');
   const itemsList = document.querySelector('.plates');
   const items = JSON.parse(localStorage.getItem('items')) || [];
+
+  function setAndPop(contents = items, list = itemsList) {
+    populateList(contents, list);
+    localStorage.setItem('items', JSON.stringify(contents));
+  }
 
   function addItem(e) {
     e.preventDefault();
@@ -42,8 +58,7 @@
       done: false
     }
     items.push(item);
-    populateList(items, itemsList);
-    localStorage.setItem('items', JSON.stringify(items));
+    setAndPop();
     this.reset();
   }
 
@@ -51,8 +66,9 @@
     platesList.innerHTML = plates.map((plate, i) => {
       return `
         <li>
-          <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ''} />
+          <input type="checkbox" data-index=${i} class="itemCheck" id="item${i}" ${plate.done ? 'checked' : ''} />
           <label for="item${i}">${plate.text}</label>
+          <span onclick="deletes(event, ${i})">X</span>
         </li>
       `
     }).join('');
@@ -64,13 +80,32 @@
     const el = e.target;
     const index = el.dataset.index;
     items[index].done = !items[index].done;
-    localStorage.setItem('items', JSON.stringify(items));
-    populateList(items, itemsList);
+    setAndPop();
+  }
+
+  function checkToggle(e) {
+    if (e.target.classList.contains('check')) {
+      items.forEach(item => item.done = true);
+    } else {
+      items.forEach(item => item.done = false);
+    }
+    setAndPop();
+  }
+
+  function deletes(e, i) {
+    items.splice(i, 1);
+    setAndPop();
   }
 
   addItems.addEventListener('submit', addItem);
   itemsList.addEventListener('click', toggleDone);
-  populateList(items, itemsList); // order is important. if it's below checkBoxes, things won't work.
+  resetBtn.addEventListener('click', () => {
+    addItems.reset();
+    localStorage.removeItem('items');
+    itemsList.innerHTML = '';
+  });
+  [checkBtn, uncheckBtn].forEach(btn => btn.addEventListener('click', checkToggle));
+  populateList(items, itemsList);
 
 
 </script>
