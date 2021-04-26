@@ -17,8 +17,8 @@
 | Slide scroll            | 210423   |                                              |      |
 | Obj and arr             | 210424   |                                              |      |
 | Localstorage            | 210424   | 210424<br />reset, delete, check/uncheck all |      |
-| Text shadow             |          |                                              |      |
-| Sorting names           |          |                                              |      |
+| Text shadow             | 210426   |                                              |      |
+| Sorting names           | 210426   |                                              |      |
 | Tally                   |          |                                              |      |
 | Webcam                  |          |                                              |      |
 | Speech recognition      |          |                                              |      |
