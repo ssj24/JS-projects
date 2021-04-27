@@ -19,8 +19,8 @@
 | Localstorage            | 210424   | 210424<br />reset, delete, check/uncheck all |      |
 | Text shadow             | 210426   |                                              |      |
 | Sorting names           | 210426   |                                              |      |
-| Tally                   |          |                                              |      |
-| Webcam                  |          |                                              |      |
+| Tally                   | 210427   |                                              |      |
+| Webcam                  | 210427   |                                              |      |
 | Speech recognition      |          |                                              |      |
 | Speedometer and compass |          |                                              |      |
 | Links                   |          |                                              |      |
