@@ -21,7 +21,7 @@
 | Sorting names           | 210426   |                                              |      |
 | Tally                   | 210427   |                                              |      |
 | Webcam                  | 210427   |                                              |      |
-| Speech recognition      |          |                                              |      |
+| Speech recognition      | 210428   |                                              |      |
 | Speedometer and compass |          |                                              |      |
 | Links                   |          |                                              |      |
 | Speech synthesis        |          |                                              |      |

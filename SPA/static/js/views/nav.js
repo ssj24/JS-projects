@@ -35,7 +35,6 @@ function toggleNav() {
 
 // Event Listeners
 export default function init() {
-  console.log('yay');
   menuBars.addEventListener('click', toggleNav);
   navItems.forEach((nav) => {
     nav.addEventListener('click', toggleNav);

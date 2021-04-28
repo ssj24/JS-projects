@@ -82,7 +82,7 @@ nav {
       font-size: 3rem;
       &::before {
         content: "";
-        width: 40vw;
+        width: 30vw;
         height: 3px;
         background-color: #fff;
         position: absolute;
@@ -92,7 +92,7 @@ nav {
       }
       &::after {
         content: "";
-        width: 40vw;
+        width: 30vw;
         height: 3px;
         background-color: #fff;
         position: absolute;

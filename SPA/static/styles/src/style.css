@@ -61,7 +61,7 @@ nav a li {
 }
 nav a li::before {
   content: "";
-  width: 40vw;
+  width: 30vw;
   height: 3px;
   background-color: #fff;
   position: absolute;
@@ -71,7 +71,7 @@ nav a li::before {
 }
 nav a li::after {
   content: "";
-  width: 40vw;
+  width: 30vw;
   height: 3px;
   background-color: #fff;
   position: absolute;
