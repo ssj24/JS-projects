@@ -22,9 +22,9 @@
 | Tally                   | 210427   |                                              |      |
 | Webcam                  | 210427   |                                              |      |
 | Speech recognition      | 210428   |                                              |      |
-| Speedometer and compass |          |                                              |      |
-| Links                   |          |                                              |      |
-| Speech synthesis        |          |                                              |      |
+| Speedometer and compass | 210429   |                                              |      |
+| Links                   | 210429   |                                              |      |
+| Speech synthesis        | 210430   |                                              |      |
 | Sticky nav              |          |                                              |      |
 | Events                  |          |                                              |      |
 | Dropdown                |          |                                              |      |
