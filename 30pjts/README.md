@@ -25,7 +25,7 @@
 | Speedometer and compass | 210429   |                                              |      |
 | Links                   | 210429   |                                              |      |
 | Speech synthesis        | 210430   |                                              |      |
-| Sticky nav              |          |                                              |      |
+| Sticky nav              | 210430   |                                              |      |
 | Events                  |          |                                              |      |
 | Dropdown                |          |                                              |      |
 | Click & drag            |          |                                              |      |
