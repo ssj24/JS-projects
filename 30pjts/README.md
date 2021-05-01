@@ -26,8 +26,8 @@
 | Links                   | 210429   |                                              |      |
 | Speech synthesis        | 210430   |                                              |      |
 | Sticky nav              | 210430   |                                              |      |
-| Events                  |          |                                              |      |
-| Dropdown                |          |                                              |      |
+| Events                  | 210501   |                                              |      |
+| Dropdown                | 210501   |                                              |      |
 | Click & drag            |          |                                              |      |
 | Video speed control     |          |                                              |      |
 | Countdown               |          |                                              |      |
