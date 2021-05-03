@@ -28,8 +28,8 @@
 | Sticky nav              | 210430   |                                              |      |
 | Events                  | 210501   |                                              |      |
 | Dropdown                | 210501   |                                              |      |
-| Click & drag            |          |                                              |      |
-| Video speed control     |          |                                              |      |
-| Countdown               |          |                                              |      |
-| Whack a mole            |          |                                              |      |
+| Click & drag            | 210503   |                                              |      |
+| Video speed control     | 210503   |                                              |      |
+| Countdown               | 210503   |                                              |      |
+| Whack a mole            | 210503   |                                              |      |
 
