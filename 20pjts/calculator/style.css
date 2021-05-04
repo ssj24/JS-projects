@@ -6,15 +6,13 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: linear-gradient(to right, #0f2027, #314950, #2c5364);  
   /* background: linear-gradient(to top, #3a6186, #89253e); */
 }
 
 .calculator {
   background: white;
+  margin: 0 auto;
   width: 400px;
   border-radius: 12px;
   box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
@@ -38,6 +36,41 @@ body {
   font-family: 'Lucida Console', sans-serif;
   font-weight: 100;
   overflow-x: auto;
+}
+
+.history {
+  background-image: url('EmptyChalkboard.svg');
+  background-size: cover;
+  width: 450px;
+  height: 300px;
+  margin: 40px auto;
+  color: white;
+  padding: 25px;
+  position: relative;
+}
+
+#history {
+  font-size: 30px;
+  margin: 15px;
+  height: 80%;
+  overflow-y: scroll;
+  scroll-behavior: auto;
+}
+#resetHistory {
+  background-image: url('eraser.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 1.3rem;
+  z-index: 2;
+}
+
+#resetHistory:hover {
+  transform: scale(1.3);
 }
 
 /* Custom Scrollbar */
