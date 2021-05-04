@@ -1,7 +1,6 @@
 import nav from './views/nav.js';
 import paint from './views/paint.js';
 import Error404 from './views/error.js';
-import Utils from './utils.js';
 nav();
 
 const routes = {
