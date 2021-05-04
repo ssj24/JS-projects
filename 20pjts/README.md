@@ -18,7 +18,7 @@
 | NASA APOD           | 210323   |                                                              |        |
 | Math Sprint Game    | 210324   |                                                              |        |
 | Drag n' Drop        | 210325   |                                                              |        |
-| Calculator          | 210326   |                                                              |        |
+| Calculator          | 210326   | 210504<br />add calculation history                          |        |
 | Splash Page         | 210327   |                                                              |        |
 | Paint Clone         | 210329   |                                                              |        |
 | Pong                | 210330   |                                                              |        |
