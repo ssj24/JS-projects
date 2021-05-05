@@ -1,24 +1,25 @@
 import nav from './views/nav.js';
-import paint from './views/paint.js';
-import Error404 from './views/error.js';
-nav();
+import mole from './views/whackAMole.js';
 
-const routes = {
-  '/paint' : paint,
-};
+const gamesContent = document.getElementById('gamesContent');
 
-const router = async () => {
-  const content = null || document.getElementById('content');
-  let request = Utils.parseRequestURL()
 
-  let parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '');
 
-  let page = routes[parsedURL] ? routes[parsedURL] : Error404
-  content.innerHTML = await Error404.render();
-  // content.innerHTML = await page.render();
-  // await page.after_render();
+function router(e) {
+  let hash = window.location.hash.slice(1);
+  switch (hash) {
+    case 'mole':
+      gamesContent.innerHTML = mole.generateHtml();
+      break;
+  
+    default:
+      break;
+  }
 }
 
 window.addEventListener('hashchange', router);
 
 window.addEventListener('load', router);
+
+nav();
+mole.load();
