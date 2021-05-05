@@ -17,7 +17,7 @@
 | Spock Rock Game     | 210322   |                                                              |        |
 | NASA APOD           | 210323   |                                                              |        |
 | Math Sprint Game    | 210324   |                                                              |        |
-| Drag n' Drop        | 210325   |                                                              |        |
+| Drag n' Drop        | 210325   | 210505<br />- bg toggle<br />- user input title              |        |
 | Calculator          | 210326   | 210504<br />add calculation history                          |        |
 | Splash Page         | 210327   |                                                              |        |
 | Paint Clone         | 210329   |                                                              |        |
