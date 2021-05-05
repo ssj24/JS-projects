@@ -1,3 +1,5 @@
+const { body } = document;
+const title = document.querySelector('.main-title');
 const addBtns = document.querySelectorAll('.add-btn:not(.solid)');
 const saveItemBtns = document.querySelectorAll('.solid');
 const addItemContainers = document.querySelectorAll('.add-container');
@@ -23,6 +25,16 @@ let listArrays = [];
 let draggedItem;
 let dragging = false;
 let currentColumn;
+
+function changeBackground(number) {
+  // Check if background already showing
+  if (body.className === `background-${number}`) {
+    body.className = '';
+    return;
+};
+body.className = '';
+body.classList.add(`background-${number}`);
+}
 
 // Get Arrays from localStorage if available, set default values if not
 function getSavedColumns() {
@@ -71,6 +83,7 @@ function createItemEl(columnEl, column, item, index) {
 
 // Update Columns in DOM - Reset HTML, Filter Array, Update localStorage
 function updateDOM() {
+  title.value = localStorage.getItem('title');
   // Check localStorage once -> boolean variable
   if (!updatedOnLoad) {
     getSavedColumns();
@@ -184,10 +197,10 @@ function drop(e) {
 
 }
 
-function justCheck() {
-  const array = [1, 2, 3, 4, 5];
-  array.forEach(num => console.log(num));
+function titleSet() {
+  let titleText = title.value;
+  localStorage.setItem('title', titleText);
 }
 // On Load
 updateDOM();
-justCheck();
+title.addEventListener('keyup', titleSet);

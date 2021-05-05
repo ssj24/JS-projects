@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drag and Drop</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="crescent-moon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="main-title">Kanban Board</h1>
+    <span class="title">
+        <div class="background-toggles" title="Change Background">
+            <div class="background-1" onclick="changeBackground('1')"></div>
+            <div class="background-2" onclick="changeBackground('2')"></div>
+            <div class="background-3" onclick="changeBackground('3')"></div>
+        </div>
+        <input type="text" class="main-title" placeholder="Name your board">
+        </input>
+    </span>
     <div class="drag-container">
         <ul class="drag-list">
             <!-- Backlog Column -->
