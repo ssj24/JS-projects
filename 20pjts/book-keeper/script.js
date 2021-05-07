@@ -6,7 +6,7 @@ const websiteNameEl = document.getElementById('website-name');
 const websiteUrlEl = document.getElementById('website-url');
 const bookmarksContainer = document.getElementById('bookmarks-container');
 
-let bookmarks = {};
+let bookmarks = [];
 
 // Show Modal, Focus on Input
 function showModal() {
@@ -40,7 +40,7 @@ function buildBookmarks() {
   // Remove all bookmark elements
   bookmarksContainer.textContent = '';
   // Build items
-  Object.keys(bookmarks).forEach(id) => {
+  Object.keys(bookmarks).forEach(id => {
     const { name, url } = bookmarks[id];
     // Item
     const item = document.createElement('div');
