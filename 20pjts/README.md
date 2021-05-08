@@ -367,29 +367,324 @@
 
 11. VIdeo Player
 
+    video player
+
+    - `console.log(e)` of click event: `offsetX` shows where you clicked by pixel unit
+    - `srcElement.offsetWidth` shows whole width(includes margin, padding)
+
 12. Form Validator
+
+    validate the form
+
+    - ```html
+      <form novalidate>
+      </form>
+      ```
+
+      `novalidate` makes user can click submit button
+
+      even conditions of inputs are unqualified
 
 13. Spock Rock Game  
 
+    spock rock game in the big bang theory
+
+    - `onclick` at html equals `addEventListener` at JS
+
+    - ```js
+      console.log(arr.indexOf(item))
+      ```
+
+      if item is not in the arr, it returns -1
+
+    - `<script type=module>` => it makes impossible to call the function at the html by `onclick`. because it is not global variable anymore
+      If you still want to call function by onclick, 
+      write `window.functionName = functionName;` on the js file. 
+
+    - dynamic module loading: load the module only when it is needed
+
+      ```js
+      import('./confetti.js')
+          .then((module) => {
+            module.stopConfetti();
+            module.removeConfetti();
+          })
+      }
+      ```
+
+      of course, export at the confetti.js is needed.
+
 14. NASA APOD
 
-15. Math Sprint Game  
+    get nasa apod from NASA API
+
+    bookmark article
+
+    - ```js
+      saveText.onclick = `saveFavorite('${result.url}')`;
+      saveText.setAttribute('onclick', `saveFavorite('${result.url}')`);
+      ```
+
+      only second one will work
+
+    - forEach method works with array,
+      if you want to use object with it, modify the object by `Object.values()`
+
+    - Declarative programming
+
+      It is not better programming. it's just another way of programming. it expresses logic without describing it's control flow. HTML is declarative. just saying liks 'page should look like this.'
+
+    - Imperative programming
+
+      programming paradigm that uses code statements to tell the computer what to do. that's what we've been doing. It needs us to know what's going on with exact step.Directly tell what to do. though it's intuitive, it is hard to see the relationships between features.
+
+15. Math Sprint Game 
+
+    solve simple math games
+
+    four different mode
+
+    record the highest score of each mode
+
+    - `removeEventListener()`
+
+    - setTimeout() is not exact way to measure time. it's way too fragile.
+
+      ```js
+      function countdownStart() {
+        countdown.textContent = '3';
+        setTimeout(() => {
+          countdown.textContent = '2';
+        }, 1000);
+        setTimeout(() => {
+          countdown.textContent = '1';
+        }, 2000);
+        setTimeout(() => {
+          countdown.textContent = 'GO!';
+        }, 3000);
+      }
+      
+      // Navigate from Splash Page to Countdown Page
+      function showCountdown() {
+        countdownPage.hidden = false;
+        splashPage.hidden = true;
+        countdownStart();
+        populateGamePage();
+        setTimeout(showGamePage, 4000);
+      }
+      ```
+
+      proper way would be below!
+
+      ```js
+      function countdownStart() {
+        let count = 3;
+        countdown.textContent = count;
+        const timeCountDown = setInterval(()=>{
+          count--;
+          if (count === 0) {
+            countdown.textContent = 'Go!';
+          } else if (count === -1) {
+            showGamePage();
+            // It is important to clearInterval whenever using setInterval method.
+            clearInterval(timeCountDown);
+          } else {
+            countdown.textContent = count;
+          }
+        }, 1000) // first parameter of setInterval is a function that you'd like to call.
+      }
+      ```
 
 16. Drag n' Drop
+
+    make simple board like Trello
 
     210505  - bg toggle
 
     ​			   - user input title    
 
+    - if you see empty array and for loop pattern, think of using map!
+
+      ```js
+      function rebuildArrays() {
+        backlogListArray = [];
+        for (let i = 0; i < backlogList.children.length; i++) {
+          backlogListArray.push(backlogList.children[i].textContent);
+        }
+        progressListArray = [];
+        for (let i = 0; i < progressList.children.length; i++) {
+          progressListArray.push(progressList.children[i].textContent);
+        }
+        completeListArray = [];
+        for (let i = 0; i < completeList.children.length; i++) {
+          completeListArray.push(completeList.children[i].textContent);
+        }
+        onHoldListArray = [];
+        for (let i = 0; i < onHoldList.children.length; i++) {
+          onHoldListArray.push(onHoldList.children[i].textContent);
+        }
+        updateDOM();
+      }
+      ```
+
+      using MAP
+
+      map is useful especially when you need to change or modify the content of array
+
+      ```js
+      function rebuildArrays() {
+        backlogListArray = backlogList.children.map(i => i.textContent);
+        progressListArray = progressList.children.map(i => i.textContent);
+        completeListArray = completeList.children.map(i => i.textContent);
+        onHoldListArray = onHoldList.children.map(i => i.textContent);
+        
+        updateDOM();
+      }
+      ```
+
+      but it throws an error saying children is not array.
+
+      thd children in this case is HTMLCollection which is object but looks like array.
+
+      In this case, use Array.from(..)
+
+      ```js
+      function rebuildArrays() {
+        backlogListArray = Array.from(backlogList.children).map(i => i.textContent);
+        progressListArray = Array.from(progressList.children).map(i => i.textContent);
+        completeListArray = Array.from(completeList.children).map(i => i.textContent);
+        onHoldListArray = Array.from(onHoldList.children).map(i => i.textContent);
+        updateDOM();
+      }
+      ```
+
 17. Calculator
+
+    simple calculator
 
     210504 - add calculation history    
 
+    - ```js
+      inputBtns.forEach((inputBtn) => {
+        if (inputBtn.classList.length === 0) {
+            inputBtn.addEventListener('click', () => sendNumberValue(inputBtn.value));
+        } else if (inputBtn.classList.contains('operator')) {
+          inputBtn.addEventListener('click', () => sendNumberValue(inputBtn.value));
+        } else if (inputBtn.classList.contains('decimal')) {
+            inputBtn.addEventListener('click', () => sendNumberValue());
+        }
+      });
+      ```
+
+    - ```js
+      inputBtn.addEventListener('click', () => addDecimal);
+      ```
+
+      This isn't work because i didn't call the function by adding();
+
+      ```js
+      clearBtn.addEventListener('click', resetAll);
+      ```
+
+      But this does work
+
+    - ```js
+      // Calculate first and second values depending on operator
+      const calculate = {
+        '/': (firstNumber, secondNumber) => firstNumber / secondNumber,
+        '*': (firstNumber, secondNumber) => firstNumber * secondNumber,
+        '+': (firstNumber, secondNumber) => firstNumber + secondNumber,
+        '-': (firstNumber, secondNumber) => firstNumber - secondNumber,
+        '=': (firstNumber, secondNumber) => secondNumber,
+      }
+      
+      function useOperator(operator) {
+        const currentValue = Number(calculatorDisplay.textContent);
+        // Prevent multiple operators
+        if (operatorValue && awaitingNextValue) return;
+        // Assign firstValue if no value
+        if (!firstValue) {
+          firstValue = currentValue;
+        } else {
+           console.log(firstValue, operator, currentValue);
+           const calculation = calculate[operatorValue](firstValue, currentValue);
+        }
+      ```
+
+      this is another way of defining variables
+
+    - variable declaration: top
+
+      event listener: bottom
+
 18. Splash Page
+
+    Imitate the existing page
+
+    - img located in div, in this case just resizing of div won't limit the img size. you need to cut down both div and img size
+
+    - ```js
+      const body = document.body;
+      const { body } = document;
+      ```
+
+      both line work the same way.
+
+      there is body in document.
+
+    - `const memory = Array(10000).fill('*')`: easy way of making array. memory has 10000 of length that every index is filled with */
+
+    - development tool - memory - heap snapshot
+
+      it shows how much memory is used
+
+      it is important to think of memory
+
+      even the declaration of each variable is memory.
 
 19. Paint Clone
 
+    simple canvas
+
+    brush size and color change automatically
+
+    - Think of extensibility as a programmer
+
+      - `setTimeout(switchToBrush, 1500);`
+
+        this line repeated 6 times =>
+
+        make global variable `brushTime = setTimeout(switchToBrush, brushTime);` =>
+
+        use brushTime instead of whole setTimeout command
+
+      - `function brushTimeSetTimeout(ms) { setTimeout(switchToBrush, ms); }` 
+
+        by making this function you could replace like
+
+        `brushTimeSetTimeout(brushTime);`
+
 20. Pong
+
+    pong game
+
+    record the highest score
+
+    - setInterval is delayed whenever the next process started
+
+      use `window.requestAnimationFrame()` instead! It stops when the window out focused for saving battery
+
+    - inNewGame: startGame for start a new game. the difference inNewGame and startGame is reset gameOverEl. startGame won't need to remove that el.
+
+    - NOBODY IS PERFECT
+
+      You couldn't, shouldn't and don't need to do it from scratch by yourself.
+
+      Find what the others have done.
+
+      code, library, design... everything
+
+      Just not try to build from zero.
 
 
 
