@@ -36,7 +36,9 @@
 
    infinite scroll of photos
 
-   210330 - user can change a keyword(if no keyword returns random)    
+   210330 - user can change a keyword(if no keyword returns random)
+
+   :wrench: carousel
 
    -  image.loading = 'lazy';
      slow image loading with scrolling
@@ -251,6 +253,10 @@
 
    music player
 
+   :wrench: store the songIndex in localStorage
+
+   :wrench:volume control
+
    - https://www.w3schools.com/tags/ref_av_dom.asp
 
    - textContent VS innerText
@@ -303,6 +309,12 @@
 
    customized countdown
 
+   :wrench: change timezone
+
+   :wrench: countdown container(place title and the input on same line, input at middle)
+
+   :wrench: title need to be shown in countdown & complete pages
+
    ```css
    .container {
      min-width: unset;
@@ -330,6 +342,12 @@
 10. Book Keeper
 
     page keeps bookmark
+
+    :wrench: bookmark name- trash align
+
+    :wrench: bookmark modal styling
+
+    :wrench: if bookmarks have same link, delete function does not work properly
 
     - if user clicks outside of a modal, close the modal(delete `show-modal` class). if user clicks inside of a modal, nothing happens.
 
@@ -562,7 +580,11 @@
 
     simple calculator
 
-    210504 - add calculation history    
+    210504 - add calculation history 
+
+    :wrench: catch keyboard
+
+    :wrench: * || / need to be calculated first
 
     - ```js
       inputBtns.forEach((inputBtn) => {
@@ -670,21 +692,25 @@
 
     record the highest score
 
+    :wrench: responsive canvas
+
     - setInterval is delayed whenever the next process started
 
       use `window.requestAnimationFrame()` instead! It stops when the window out focused for saving battery
 
     - inNewGame: startGame for start a new game. the difference inNewGame and startGame is reset gameOverEl. startGame won't need to remove that el.
 
-    - NOBODY IS PERFECT
+      
 
-      You couldn't, shouldn't and don't need to do it from scratch by yourself.
+**NOBODY IS PERFECT**
 
-      Find what the others have done.
+You couldn't, shouldn't and don't need to do it from scratch by yourself.
 
-      code, library, design... everything
+Find what the others have done.
 
-      Just not try to build from zero.
+code, library, design... everything
+
+Just not try to build from zero.
 
 
 
