@@ -5,16 +5,28 @@
   <title>HTML5 Canvas</title>
 </head>
 <body>
-<canvas id="draw" width="800" height="800"></canvas>
+  <div class="controller">
+    <input type="file" id="bgFile"
+       accept="image/png, image/jpeg">
+    <button class="reset" onclick="resetCanvas()">new screen</button>
+    <a class="download" onclick="toImg()">download</a>
+  </div>
+  <canvas id="draw">
+  </canvas>
 <script>
-const canvas = document.querySelector('#draw');
+const bgFile = document.getElementById('bgFile');
+const downEl = document.querySelector('.download');
+const canvas = document.getElementById('draw');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-ctx.strokeStyle = '#07521d';
-ctx.lineJoin = 'round';
-ctx.lineCap = 'round';
-// ctx.globalCompositeOperation = 'saturation';
+
+function defaultSet() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  ctx.strokeStyle = '#07521d';
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  // ctx.globalCompositeOperation = 'saturation';
+}
 
 let isDrawing = false;
 let lastX = 0;
@@ -43,6 +55,39 @@ function draw(e) {
   else ctx.lineWidth--;
 }
 
+function resetCanvas() {
+  defaultSet();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function setBg(event) {
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const bgImg = new Image();
+    bgImg.onload = function() {
+      const wWidth = window.innerWidth;
+      const wHeight = window.innerHeight;
+      // bgImg.width = bgImg.width >= wWidth ? wWidth : bgImg.width
+      // bgImg.height = bgImg.height >= wHeight ? wHeight : bgImg.height;
+      const scale = Math.min(wWidth / bgImg.width, wHeight / bgImg.height);
+      const x = (wWidth / 2) - (bgImg.width / 2) * scale;
+      const y = (wHeight / 2) - (bgImg.height / 2) * scale;
+      defaultSet();
+      ctx.drawImage(bgImg, x, y, bgImg.width * scale, bgImg.height * scale);
+    }
+    bgImg.src = e.target.result;
+  }
+  reader.readAsDataURL(event.target.files[0]);
+}
+
+function toImg() {
+  const image = canvas.toDataURL("image/png")
+    .replace("image/png", "image/octet-stream");
+  const fileName = new Date().toLocaleString();
+  downEl.setAttribute("href", image);
+  downEl.setAttribute("download", `${fileName}.png`);
+}
+
 canvas.addEventListener('mousedown', (e) => {
   // to draw new line when mousedown again
   [lastX, lastY] = [e.offsetX, e.offsetY];
@@ -51,12 +96,49 @@ canvas.addEventListener('mousedown', (e) => {
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
-
+bgFile.addEventListener('change', setBg);
+window.addEventListener('load', defaultSet);
 </script>
 
 <style>
   html, body {
     margin: 0;
+  }
+  .controller {
+    position: fixed;
+    right: 0;
+    margin: 10px;
+  }
+  .reset {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .reset:hover {
+    color: black;
+    background-color: white;
+  }
+  .reset:focus {
+    outline: none;
+  }
+
+  .download {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+  }
+  .download:hover {
+    color: black;
+    background-color: white;
   }
 </style>
 
