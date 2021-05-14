@@ -6,12 +6,12 @@
 
    210513 
 
-   	- store audio recording
-   	- download .wav file
+   - store audio recording
+   - download .wav file
 
 2. JS and CSS Clock
 
-   :wrench: implement 16 mouse move shadow​
+   210514 combine 16 mouse move shadow
 
 3. CSS Variables
 
@@ -94,7 +94,7 @@
 
 5. Flex Panel Gallery
 
-   :wrench: the panel opened won't automaticall closed when the other is opened​
+   :wrench: the panel opened won't automatically closed when the other is opened​
 
 6. Type Ahead
 
@@ -119,6 +119,14 @@
 8. HTML5 Canvas
 
    :wrench: get user input color variation, color variation speed, font size
+
+   :wrench: make `.controller` toggle
+
+   210514 
+
+   	- reset button
+   	- get user input image -> set canvas background
+   	- download canvas image 
 
 9. Dev Tools Domination
 
