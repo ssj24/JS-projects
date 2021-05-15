@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>JS Drum Kit</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="crescent-moon.png">
 </head>
 <body>
   <div class="controller">
@@ -21,38 +22,65 @@
     <div data-key="65" class="key">
       <kbd>A</kbd>
       <span class="sound">clap</span>
+      <div class="sliderContainer" title="change volume">
+        <div class="slider"></div>
+      </div>
     </div>
     <div data-key="83" class="key">
       <kbd>S</kbd>
       <span class="sound">hihat</span>
+      <div class="sliderContainer" title="change volume">
+        <div class="slider"></div>
+      </div>
     </div>
     <div data-key="68" class="key">
       <kbd>D</kbd>
       <span class="sound">kick</span>
+      <div class="sliderContainer" title="change volume">
+        <div class="slider"></div>
+      </div>
     </div>
     <div data-key="70" class="key">
       <kbd>F</kbd>
       <span class="sound">openhat</span>
+      <div class="sliderContainer" title="change volume">
+        <div class="slider"></div>
+      </div>
     </div>
     <div data-key="71" class="key">
       <kbd>G</kbd>
       <span class="sound">boom</span>
+      <div class="sliderContainer" title="change volume">
+        <div class="slider"></div>
+      </div>
     </div>
     <div data-key="72" class="key">
       <kbd>H</kbd>
       <span class="sound">ride</span>
+      <div class="sliderContainer" title="change volume">
+        <div class="slider"></div>
+      </div>
     </div>
     <div data-key="74" class="key">
       <kbd>J</kbd>
       <span class="sound">snare</span>
+      <div class="sliderContainer" title="change volume">
+        <div class="slider"></div>
+      </div>
     </div>
     <div data-key="75" class="key">
       <kbd>K</kbd>
       <span class="sound">tom</span>
+      <div class="sliderContainer" title="change volume">
+        <div class="slider"></div>
+      </div>
     </div>
     <div data-key="76" class="key">
       <kbd>L</kbd>
       <span class="sound">tink</span>
+      <div class="sliderContainer" title="change volume">
+        <div class="slider"></div>
+      </div>
     </div>
   </div>
   <audio data-key="65" src="sounds/clap.wav"></audio>
@@ -69,14 +97,25 @@
   const recordBtn = document.querySelector('.record');
   const stopBtn = document.querySelector('.stop');
   const downloadBtn = document.querySelector('.download');
+  const sliders = document.querySelectorAll('.sliderContainer');
   let recorder;
   let stopped = false;
   let shouldStop = false;
 
+  function setVolume(e) {
+    if (e.target.classList.contains('slider')) {
+      e.target.style.width = `${e.offsetX}%`;
+    } else {
+      e.target.firstElementChild.style.width = `${e.offsetX}%`;
+    }
+  }
+
   function playSound(e) {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    const bar = key.querySelector('.slider');
     if (!audio) return;
+    audio.volume = bar.clientWidth / 100;
     audio.currentTime = 0; // rewind to start
     audio.play();
     key.classList.add('playing');
@@ -120,9 +159,7 @@
   window.addEventListener('keydown', playSound);
   recordBtn.addEventListener('click', record);
   stopBtn.addEventListener('click', function() { shouldStop = true; });
-
+  sliders.forEach(slider => slider.addEventListener('click', setVolume));
 </script>
-
-
 </body>
 </html>
