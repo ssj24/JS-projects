@@ -49,7 +49,8 @@ video {
   z-index: 2;
   display: flex;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.85)
+  background: rgba(255, 255, 255, 0.85);
+  text-align: center;
 }
 
 .input-container {
@@ -67,6 +68,7 @@ h1 {
 /* Form */
 .form {
   width: 480px;
+  margin: 0 auto;
 }
 
 label {
@@ -102,6 +104,10 @@ button {
 
 button:hover {
   filter: brightness(110%);
+}
+
+.main-button {
+  width: 300px;
 }
 
 /* Countdown */

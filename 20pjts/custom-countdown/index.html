@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Countdown</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="./crescent-moon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
             <h1>Create a Custom Countdown!</h1>
             <form class="form" id="countdownForm">
                 <label for="title">Title</label>
-                <input type="text" id="title" placeholder="What are you dounting down to?">
+                <input type="text" id="title" placeholder="What are you counting down to?">
                 <label for="date-picker">Select a Date</label>
                 <input type="date" id="date-picker">
                 <button type="submit">Submit</button>
@@ -34,13 +34,13 @@
                 <li><span></span></li>
                 <li><span></span></li>
             </ul>
-            <button id="countdown-button">Reset</button>
+            <button id="countdown-button" class="main-button">Reset</button>
         </div>
         <!-- Complete -->
         <div class="complete" id="complete" hidden>
             <h1 class="complete-title">Countdown Complete!</h1>
             <h1 id="complete-info"></h1>
-            <button id="complete-button">New Countdown</button>
+            <button id="complete-button" class="main-button">New Countdown</button>
         </div>
     </div>
     <!-- Script -->

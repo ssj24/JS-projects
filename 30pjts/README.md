@@ -2,16 +2,18 @@
 
 1. JavaScript Drum Kit
 
-   :wrench: volume control for each​
+   - 210513 
+     - store audio recording
+     - download .wav file
 
-   210513 
+   - 210515
+     - volume control for each audio
 
-   - store audio recording
-   - download .wav file
+   - firstChild VS firstElementChild
 
 2. JS and CSS Clock
 
-   210514 combine 16 mouse move shadow
+   - 210514 combine 16 mouse move shadow
 
 3. CSS Variables
 
@@ -122,12 +124,11 @@
 
    :wrench: make `.controller` toggle
 
-   210514 
-
-   	- reset button
-   	- get user input image -> set canvas background
-   	- download canvas image 
-
+   - 210514 
+  - reset button
+     - get user input image -> set canvas background
+     - download canvas image 
+   
 9. Dev Tools Domination
 
 10. Hold Shift and Check Checkboxes
@@ -150,9 +151,9 @@
 
 15. LocalStorage
 
-    210424 - reset, delete, check/uncheck all
-
     :wrench:everytime populateList function is evoked, it renders whole list again. Wonder how could add just new item on the existed list
+
+    - 210424 - reset, delete, check/uncheck all
 
     - In case of Form, add event listener to form's submit is greater way than button click
 

@@ -307,13 +307,13 @@
 
 9. Custom Countdown
 
-   customized countdown
+   customized daily countdown
 
    :wrench: change timezone
 
-   :wrench: countdown container(place title and the input on same line, input at middle)
-
-   :wrench: title need to be shown in countdown & complete pages
+   - 210514
+     - reset button width size
+     - modal contents at center
 
    ```css
    .container {
