@@ -125,10 +125,10 @@
    :wrench: make `.controller` toggle
 
    - 210514 
-  - reset button
+     - reset button
      - get user input image -> set canvas background
      - download canvas image 
-   
+
 9. Dev Tools Domination
 
 10. Hold Shift and Check Checkboxes
@@ -340,10 +340,9 @@
 
 30. Whack A Mole
 
-    :wrench: time's up! signal
-
-    :wrench: button styling
-
-    :wrench: bomb
-
     :wrench: local storage​
+
+    - 210518
+  - button styling
+      - time's up!
+  - add bomb

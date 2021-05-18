@@ -9,33 +9,50 @@
 <body>
 
   <h1>Whack-a-mole! <span class="score">0</span></h1>
-  <button onClick="startGame()">Start!</button>
+  <button class="start_btn" onClick="startGame()">Start!</button>
+
+  <div class="modal_back" id="gameOver">
+    <div class="modal">
+      <h1>Time's up!</h1>
+      <p>your score is <span id="modalScore"></span></p>
+      <button class="start_btn" onClick="startGame()">New Game!</button>
+    </div>
+  </div>
 
   <div class="game">
     <div class="hole hole1">
       <div class="mole"></div>
+      <div class="bomb"></div>
     </div>
     <div class="hole hole2">
       <div class="mole"></div>
+      <div class="bomb"></div>
     </div>
     <div class="hole hole3">
       <div class="mole"></div>
+      <div class="bomb"></div>
     </div>
     <div class="hole hole4">
       <div class="mole"></div>
+      <div class="bomb"></div>
     </div>
     <div class="hole hole5">
       <div class="mole"></div>
+      <div class="bomb"></div>
     </div>
     <div class="hole hole6">
       <div class="mole"></div>
+      <div class="bomb"></div>
     </div>
   </div>
 
 <script>
+const modal = document.getElementById('gameOver');
+const startBtn = document.querySelector('.start_btn');
 const holes = document.querySelectorAll('.hole');
 const scoreBoard = document.querySelector('.score');
 const moles = document.querySelectorAll('.mole');
+const bombs = document.querySelectorAll('.bomb');
 const timeUP = true;
 let lastHole;
 let score = 0;
@@ -55,22 +72,41 @@ function randomHole(holes) {
 }
 
 function peep() {
-  const time = randomTime(200, 1000);
+  const time = randomTime(500, 1000);
+  const timeBomb = randomTime(300, 700);
   const hole = randomHole(holes);
+  const holeBomb = randomHole(holes);
   hole.classList.add('up');
-  setTimeout(() => {
-    hole.classList.remove('up');
-    if (!timeUp) peep();
-  }, time);
+  if (!holeBomb.classList.contains('up')) {
+    holeBomb.classList.add('down');
+    setTimeout(() => {
+      holeBomb.classList.remove('down');
+      if (!timeUp) peep();
+    }, timeBomb);
+  } else if (!hole.classList.contains('down')) {
+    setTimeout(() => {
+      hole.classList.remove('up');
+      if (!timeUp) peep();
+    }, time);
+  }
+}
+
+function showModal() {
+  modal.style.visibility = "visible";
+  document.getElementById('modalScore').textContent = score;
 }
 
 function startGame() {
   score = 0;
+  modal.style.visibility = "hidden";
+  startBtn.style.visibility = "hidden";
   scoreBoard.textContent = 0;
   timeUp = false;
   peep();
   setTimeout(() => {
     timeUp = true;
+    startBtn.style.visibility = "visible";
+    showModal();
   }, 10000)
 }
 
@@ -81,7 +117,15 @@ function bonk(e) {
   this.parentNode.classList.remove('up');
 }
 
+function watchOut(e) {
+  if (!e.isTrusted) return;
+  score--;
+  scoreBoard.textContent = score;
+  this.parentNode.classList.remove('down');
+}
+
 moles.forEach(mole => mole.addEventListener('click', bonk));
+bombs.forEach(bomb => bomb.addEventListener('click', watchOut));
 </script>
 </body>
 </html>
