@@ -341,47 +341,46 @@
 
 10. Book Keeper
 
-    page keeps bookmark
+   page keeps bookmark
 
-    :wrench: bookmark name- trash align
+   - 210522
+     - name-trash align
+     - modal style
+     - prevent add same url bookmark
 
-    :wrench: bookmark modal styling
+   - if user clicks outside of a modal, close the modal(delete `show-modal` class). if user clicks inside of a modal, nothing happens.
 
-    :wrench: if bookmarks have same link, delete function does not work properly
+     ```js
+     window.addEventListener('click', (e) => (e.target === modal) ? modal.classList.remove('show-modal') : false);
+     ```
 
-    - if user clicks outside of a modal, close the modal(delete `show-modal` class). if user clicks inside of a modal, nothing happens.
+   - includes method can have only one parameter
 
-      ```js
-      window.addEventListener('click', (e) => (e.target === modal) ? modal.classList.remove('show-modal') : false);
-      ```
+     ```js
+     if (!urlValue.includes('https://') && !urlValue.includes('http://')) {     
+       urlValue = `https://${urlValue}`; 
+     }
+     ```
 
-    - includes method can have only one parameter
+     `if (!urlValue.includes('https://'))`: if urlValues doesn't have https://
 
-      ```js
-      if (!urlValue.includes('https://') && !urlValue.includes('http://')) {     
-        urlValue = `https://${urlValue}`; 
-      }
-      ```
+   - e.preventDefault(): to prevent reloading. when  user clicks submit button, page reloading is occured automatically. this method can prevent such happening.
 
-      `if (!urlValue.includes('https://'))`: if urlValues doesn't have https://
+   - http/https url verification
 
-    - e.preventDefault(): to prevent reloading. when  user clicks submit button, page reloading is occured automatically. this method can prevent such happening.
+     `/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g`
 
-    - http/https url verification
+     `https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)`
 
-      `/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g`
+     I found two different reference...
 
-      `https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)`
+     In regEx, /~/ means start~end.
 
-      I found two different reference...
+     ​	g means global search, retain the index of the last match, allowing iterative search
 
-      In regEx, /~/ means start~end.
+   - `if (!nameValue || !urlValue)`: if nameValue or urlValue is missing,
 
-      ​	g means global search, retain the index of the last match, allowing iterative search
-
-    - `if (!nameValue || !urlValue)`: if nameValue or urlValue is missing,
-
-    - I had a difficulty with building delete function. If you use {} for bookmarks, you could eliminate useless loop process.
+   - I had a difficulty with building delete function. If you use {} for bookmarks, you could eliminate useless loop process.
 
 11. VIdeo Player
 

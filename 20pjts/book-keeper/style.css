@@ -49,6 +49,7 @@ h1:hover {
   border-radius: var(--border-radius);
   padding: 20px;
   margin: 10px;
+  display: flex;
 }
 
 .item:hover {
@@ -78,13 +79,19 @@ a:active {
 }
 
 .fa-trash-alt {
-  float: right;
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  z-index: 2;
+  order: 2;
+}
+
+.fa-trash-alt:hover {
+  color: navy;
+  transform: scale(1.05);
 }
 
 .name {
-  margin-top: 20px;
+  flex-grow: 3;
   margin-right: 20px;
 }
 .name img {
@@ -117,6 +124,7 @@ a:active {
   max-width: 95%;
   width: 500px;
   animation: modalopen 1s;
+  border-radius: 10px;
 }
 
 @keyframes modalopen {
@@ -129,20 +137,24 @@ a:active {
   }
 }
 
-.close-icon {
-  float: right;
-  color: white;
-  font-size: 24px;
-  position: relative;
-  top: 13px;
-  right: 13px;
-  cursor: pointer;
-}
-
 .modal-header {
   background: var(--primary-color);
   color: white;
   padding: 15px;
+  border-radius: 10px 10px 0 0;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-icon {
+  cursor: pointer;
+  margin: auto 0;
+}
+
+.close-icon:hover {
+  color: navy;
+  transform: scale(1.1);
 }
 
 h3 {
@@ -152,6 +164,12 @@ h3 {
 .modal-content {
   padding: 20px;
   background: whitesmoke;
+  border-radius: 0 0 10px 10px;
+}
+
+#bookmark-form {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Form */
@@ -161,15 +179,29 @@ h3 {
 
 .form-input {
   width: 97%;
+  margin-top: 25px;
   padding: 5px;
-  border: 2px solid var(--primary-color);
+  border: 1px solid gray;
   border-radius: var(--border-radius);
   display: block;
   outline: none;
+  position: relative;
+}
+
+.form-input:focus {
+  border: 2px solid var(--primary-color);
+  transform: scale(1.05);
+}
+
+.form-input:focus + .form-label {
+  color: var(--primary-color);
+
 }
 
 .form-label {
-  color: var(--primary-color);
+  position: relative;
+  top: -50px;
+  color: rgb(85, 85, 85);
   text-shadow: 1px 1px rgb(184, 182, 180);
   display: block;
 }
@@ -182,7 +214,7 @@ button {
   width: 100px;
   border: none;
   border-radius: var(--border-radius);
-  margin-top: 10px;
+  margin: 15px auto 0;
 }
 
 button:hover {

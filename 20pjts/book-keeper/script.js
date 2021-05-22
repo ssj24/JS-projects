@@ -21,18 +21,26 @@ window.addEventListener('click', (e) => (e.target === modal) ? modal.classList.r
 
 // Validate Form
 function validate(nameValue, urlValue) {
+  let returnVal = 1;
   const expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g;
   const regex = new RegExp(expression);
   if (!nameValue || !urlValue) {
-    alert('Please submit values for both fields.')
+    alert('Please submit values for both fields.');
     return false;
   }
   if (!urlValue.match(regex)) {
     alert('Please provide a valid web address');
     return false;
   }
+  bookmarks.forEach(bookmark => {
+    if (bookmark.url === urlValue) {
+      alert('Site already bookmarked!');
+      returnVal = 0;
+      return;
+    }
+  })
   // Valid
-  return true;
+  return returnVal;
 }
 
 // Build Bookmarks DOM
@@ -40,8 +48,8 @@ function buildBookmarks() {
   // Remove all bookmark elements
   bookmarksContainer.textContent = '';
   // Build items
-  Object.keys(bookmarks).forEach(id => {
-    const { name, url } = bookmarks[id];
+  bookmarks.forEach(bookmark => {
+    const { name, url } = bookmark;
     // Item
     const item = document.createElement('div');
     item.classList.add('item');
@@ -79,11 +87,13 @@ function fetchBookmarks() {
 }
 
 // Delete Bookmarks
-function deleteBookmark(id) {
+function deleteBookmark(url) {
   // Loop through the bookmarks array
-  if (bookmarks[id]) {
-    delete bookmarks[id]
-  }
+  bookmarks.forEach((bookmark, idx) => {
+    if (bookmark.url === url) {
+      bookmarks.splice(idx, 1);
+    }
+  });
   // Update bookmarks array in localStorage, re-populate DOM
   localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
   fetchBookmarks();
