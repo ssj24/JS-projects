@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d0d0d0' fill-opacity='0.23'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+
+main {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header {
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+h1 {
+    background: -webkit-linear-gradient( 92deg, #95d7e3, #eb76ff );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textAnimate 5s linear infinite alternate;
+}
+@keyframes textAnimate {
+    from {
+      filter: hue-rotate(0deg);
+      background-position-x: 0%;
+      
+    }
+    to {
+      filter: hue-rotate(270deg);
+      background-position-x: 600vw;
+      
+    }
+  }
+header p {
+    font-size: 1.5em;
+}
+header span {
+    color: red;
+    font-weight: bold;
+}
+button {
+    border: none;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgba(255, 247, 10, 0.372);
+}
+.main {
+    width: 100%;
+}
+.wrapper {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.elements {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.elements:hover {
+    transform: scale(1.1);
+}
+.elements.wrong::after {
+    content: "";
+    background: url("/no.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    width: 90%;
+    height: 90%;
+}
